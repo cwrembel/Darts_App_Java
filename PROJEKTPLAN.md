@@ -216,12 +216,17 @@ Diese Liste ist der direkte Startpunkt.
 
 - [x] Klaeren, ob dieses Projekt in Java bleiben soll oder ob ein anderer Stack sinnvoller ist.
 - [x] Git-Repository lokal initialisieren.
-- [ ] Remote-Repository pruefen oder verbinden.
-- [ ] `README.md` erstellen.
+- [x] Remote-Repository pruefen oder verbinden.
+- [x] Spring Boot als Starttechnologie fuer Phase 1 festlegen.
+- [x] Java und Maven sind vorhanden.
+- [ ] `README.md` spaeter erstellen, sobald es etwas Startbares gibt.
 - [ ] Minimalarchitektur skizzieren.
 - [x] Erstes Spiel festlegen.
 - [ ] Datenmodell grob entwerfen.
-- [ ] Backend-Grundgeruest erstellen.
+- [x] Backend-Grundgeruest erstellen.
+- [x] Erste Test-URL `/health` lokal testen.
+- [x] `/health` als JSON-Antwort umsetzen.
+- [x] Spring Boot DevTools einrichten und testen.
 - [ ] Frontend-Grundgeruest erstellen.
 - [ ] Erste manuelle Treffer-Eingabe bauen.
 - [ ] Ersten kompletten Spielablauf lokal testen.
@@ -236,9 +241,9 @@ Diese Punkte sind fuer den Start geklaert:
 - Erfahrungsstand: HTML/CSS-Grundlagen, sonst noch wenig Praxis mit Git, Backend, Datenbanken und Fullstack.
 - Erstes Spiel: `501`.
 
-Aktuelle naechste Frage:
+Aktueller naechster Schritt:
 
-- Wollen wir das Projekt jetzt mit Git und einem Spring-Boot-Grundgeruest initialisieren?
+- Ersten minimalen `501`-Spielzustand planen.
 
 ## 10. Geklaerte Entscheidungen
 
@@ -253,6 +258,12 @@ Grund:
 - Java ist ausdruecklich ein Lernziel.
 - Das Projekt eignet sich gut, um das Java-Oekosystem praktisch zu verstehen.
 - Mit Spring Boot koennen wir Backend, REST-API, Datenbankzugriff und spaeter WebSockets in einem verbreiteten Java-Stack lernen.
+
+Entscheidung:
+
+- Spring Boot wird fuer Phase 1 verwendet.
+- Das Frontend startet zunaechst als einfache HTML/CSS/JavaScript-Seite im Spring-Boot-Projekt.
+- Ein separates Frontend-Framework wie React oder Vue kommt erst spaeter in Frage, wenn es wirklich gebraucht wird.
 
 Wichtig zur Einordnung:
 
@@ -325,16 +336,15 @@ Gruende:
 
 ## 11. Naechster Lernschritt
 
-Als naechstes sollten wir das Projekt technisch initialisieren.
+Als naechstes planen wir einen ersten minimalen `501`-Spielzustand.
 
 Empfohlener Ablauf:
 
-1. Git-Repository erstellen.
-2. `README.md` anlegen.
-3. Entscheiden, ob wir Spring Boot direkt verwenden.
-4. Minimalen Spring-Boot-Server erstellen.
-5. Eine erste Test-URL bauen, zum Beispiel `/health`.
-6. Danach eine sehr einfache HTML-Seite anzeigen oder separat als Frontend anlegen.
+1. Verstehen, welche Daten ein `501`-Spiel am Anfang mindestens braucht.
+2. Einen einfachen Spielstand ohne Datenbank modellieren.
+3. Eine API fuer den aktuellen Spielstand planen.
+4. Danach eine sehr einfache HTML-Seite anzeigen.
+5. `README.md` erstellen, sobald es eine startbare Version gibt.
 
 Erstes Ziel fuer den Code:
 
