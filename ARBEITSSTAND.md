@@ -11,7 +11,7 @@ Diese Datei ist unser aktueller Arbeitszettel. Der langfristige Plan bleibt in `
 
 ## Jetzt
 
-- [~] Ersten minimalen `501`-Spielzustand planen.
+- [~] Minimalen `501`-Backend-Prototyp festigen und verstehen.
 
 ## Als Naechstes
 
@@ -24,7 +24,16 @@ Diese Datei ist unser aktueller Arbeitszettel. Der langfristige Plan bleibt in `
 - [x] `/health` lokal im Browser testen.
 - [x] JSON-Antwort fuer `/health` verstehen und vorbereiten.
 - [x] Spring Boot DevTools einrichten und automatischen Neustart testen.
-- [~] Minimalen `501`-Spielzustand als naechsten API-Schritt verstehen.
+- [x] Minimalen `501`-Spielzustand als Java-Klasse modellieren.
+- [x] Einen Dartwurf mit Segmentwert und Multiplikator modellieren.
+- [x] Aktuellen Spielstand ueber `GET /game` als JSON ausgeben.
+- [x] Einen Wurf ueber `POST /game/wurf` entgegennehmen.
+- [x] Wurfpunkte berechnen und vom aktuellen Spielstand abziehen.
+- [x] Ersten kompletten API-Ablauf mit `501 -> 441` lokal testen.
+- [~] Vorhandenen Java- und Spring-Ablauf festigen.
+- [ ] Eingabewerte fuer Segment und Multiplikator validieren.
+- [ ] Bust- und Checkout-Regeln schrittweise planen und umsetzen.
+- [ ] Automatische Tests fuer Spiel- und Wurflogik schreiben.
 - [ ] Kurz erklaeren, welche Rolle Java, HTML, CSS, JavaScript und JSON im Projekt haben.
 - [ ] `README.md` spaeter anlegen, sobald es etwas Startbares gibt.
 
@@ -32,11 +41,14 @@ Diese Datei ist unser aktueller Arbeitszettel. Der langfristige Plan bleibt in `
 
 - Lokales Git-Repository ist vorhanden.
 - Aktueller Branch: `main`.
-- Letzter bekannter Commit: `50ede15 Start`.
+- Letzter bekannter Commit: `caa8164 stand_21.08.26`.
 - Remote ist verbunden: `https://github.com/cwrembel/Darts_App_Java.git`.
 - Java und Maven sind auf dem Entwicklungsrechner vorhanden.
 - Spring Boot startet lokal auf `http://localhost:8080`.
-- `http://localhost:8080/health` antwortet mit JSON.
+- `GET http://localhost:8080/game` antwortet mit dem aktuellen Punktestand als JSON.
+- `POST http://localhost:8080/game/wurf` nimmt Segmentwert und Multiplikator entgegen.
+- Ein Testwurf `T20` hat den Spielstand erfolgreich von `501` auf `441` reduziert.
+- Der Spielzustand liegt aktuell nur im Arbeitsspeicher und geht bei einem Neustart verloren.
 - Spring Boot DevTools startet die App bei Code-Aenderungen automatisch neu.
 
 ## Blockiert
@@ -61,14 +73,13 @@ Diese Datei ist unser aktueller Arbeitszettel. Der langfristige Plan bleibt in `
 
 ## Naechster konkreter Schritt
 
-Wir planen als Naechstes einen ersten minimalen `501`-Spielzustand. Noch ohne Datenbank und ohne Frontend.
+Wir festigen als Naechstes den vorhandenen minimalen `501`-Backend-Prototyp. Noch ohne Datenbank und ohne Frontend.
 
-Dabei klaeren wir praktisch:
+Dabei klaeren wir praktisch und in kleinen Schritten:
 
-- Was ist ein Repository?
-- Was macht Spring Boot?
-- Was ist eine API?
-- Was bedeutet eine URL wie `/health`?
-- Wie kommen spaeter HTML, CSS und JSON dazu?
-- Wann ist eine `README.md` sinnvoll?
-- Wie modellieren wir einen sehr einfachen Spielstand?
+- Wie arbeiten `GameController`, `Spiel` und `Dartpfeil` zusammen?
+- Was sind Klassen, Objekte, Felder, Konstruktoren, Methoden und Parameter?
+- Wie unterscheiden sich `GET` und `POST`?
+- Wie pruefen wir ungueltige Eingaben, bevor der Spielstand veraendert wird?
+- Wie modellieren wir danach Bust und Checkout regelkonform?
+- Wann beginnen wir mit automatischen Tests und einer einfachen HTML-Oberflaeche?

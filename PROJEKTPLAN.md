@@ -131,13 +131,13 @@ Status: In Arbeit
 
 ### B. Backend
 
-Status: Offen
+Status: In Arbeit
 
-- API-Grundgeruest erstellen
+- [x] API-Grundgeruest erstellen
 - Spiel-Session starten
 - Spieler verwalten
-- Treffer-Event entgegennehmen
-- Spielstand berechnen
+- [x] Erstes manuelles Treffer-Event entgegennehmen
+- [~] Spielstand berechnen
 - Fehler und ungueltige Wuerfe behandeln
 - Tests fuer Spielregeln schreiben
 
@@ -222,7 +222,7 @@ Diese Liste ist der direkte Startpunkt.
 - [ ] `README.md` spaeter erstellen, sobald es etwas Startbares gibt.
 - [ ] Minimalarchitektur skizzieren.
 - [x] Erstes Spiel festlegen.
-- [ ] Datenmodell grob entwerfen.
+- [~] Datenmodell grob entwerfen.
 - [x] Backend-Grundgeruest erstellen.
 - [x] Erste Test-URL `/health` lokal testen.
 - [x] `/health` als JSON-Antwort umsetzen.
@@ -243,7 +243,7 @@ Diese Punkte sind fuer den Start geklaert:
 
 Aktueller naechster Schritt:
 
-- Ersten minimalen `501`-Spielzustand planen.
+- Minimalen `501`-Backend-Prototyp festigen und Eingaben validieren.
 
 ## 10. Geklaerte Entscheidungen
 
@@ -336,15 +336,15 @@ Gruende:
 
 ## 11. Naechster Lernschritt
 
-Als naechstes planen wir einen ersten minimalen `501`-Spielzustand.
+Der erste minimale `501`-Spielzustand und ein API-Ablauf fuer manuelle Wuerfe sind als Prototyp vorhanden. Als naechstes festigen wir diesen Stand und validieren Eingaben.
 
 Empfohlener Ablauf:
 
-1. Verstehen, welche Daten ein `501`-Spiel am Anfang mindestens braucht.
-2. Einen einfachen Spielstand ohne Datenbank modellieren.
-3. Eine API fuer den aktuellen Spielstand planen.
+1. Zusammenspiel von Controller, Spiel und Dartpfeil sicher verstehen.
+2. Segmentwert und Multiplikator validieren.
+3. Bust und Checkout schrittweise modellieren und testen.
 4. Danach eine sehr einfache HTML-Seite anzeigen.
-5. `README.md` erstellen, sobald es eine startbare Version gibt.
+5. `README.md` fuer die startbare Version erstellen.
 
 Erstes Ziel fuer den Code:
 
